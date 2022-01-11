@@ -26,7 +26,9 @@ pub mod solana_clock {
 pub struct CreateUser<'info> {
     #[account(
         init,
-        space = 100,
+        // discriminator + authority + username (20 + 4) +
+        // created_at + updated at
+        space = 8 + 32 + 24 + 8 + 8,
         payer = authority
     )]
     pub user: Account<'info, User>,

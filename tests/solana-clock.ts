@@ -11,7 +11,7 @@ describe('solana-clock', () => {
   
   const userKeypair = new anchor.web3.Keypair();
 
-  const userName = 'my-username'
+  const userName = 'my-username';
 
   it('should create user', async () => {
     // act
