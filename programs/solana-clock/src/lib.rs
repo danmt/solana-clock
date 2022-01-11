@@ -36,7 +36,7 @@ pub struct CreateUser<'info> {
 }
 
 #[derive(Accounts)]
-#[instruction(arguments: CreateUserArguments)]
+#[instruction(arguments: UpdateUserArguments)]
 pub struct UpdateUser<'info> {
     #[account(mut, has_one = authority)]
     pub user: Account<'info, User>,
